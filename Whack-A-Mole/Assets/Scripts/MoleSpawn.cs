@@ -7,7 +7,6 @@ public class MoleSpawn : MonoBehaviour
     public GameObject mole;                     // Reference to the mole prefab                       
     public GameObject buffMole;                 // Reference to the buffMole variant of mole prefab
 
-    public Vector3 offset;                      // Origin of spawner
     public float buffMoleSpawnChance = 0.1f;    // Chance to spawn a buff mole 
     public int amountOfMolesToSpawn = 1;        // Amount of moles to spawn each time
     public float minPos = -5f, maxPos = 5f;     // Spawn range of moles
@@ -26,7 +25,7 @@ public class MoleSpawn : MonoBehaviour
 
     void Spawn(int amount)
     {
-        var position = new Vector3(Random.Range(minPos, maxPos), 1, Random.Range(minPos, maxPos)) + offset;
+        var position = new Vector3(Random.Range(minPos, maxPos), 0, Random.Range(minPos, maxPos)) + transform.position; // Min/max position of where the moles spawn plus the transform of gameobject working as an offset
         
         for (int i = 0; i < amount; i++)
         {

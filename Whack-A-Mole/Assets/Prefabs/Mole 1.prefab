@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 871529197}
   - component: {fileID: 871529196}
   - component: {fileID: 7969096536094867015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mole 1
   m_TagString: Mole
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7430362140931538944}
   - component: {fileID: 4681779567687152842}
   - component: {fileID: 6627602955552101662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SnowMole1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 7430362141270604626}
   - component: {fileID: 4681779566952386456}
   - component: {fileID: 6627602956295253580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,6 +296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745273280172231574, guid: ee35146d01e452f4d9eeeb9246bdfae2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5985264910380181640, guid: ee35146d01e452f4d9eeeb9246bdfae2,
         type: 3}
@@ -406,6 +411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dig up
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745273280172231574, guid: ee35146d01e452f4d9eeeb9246bdfae2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5985264910380181640, guid: ee35146d01e452f4d9eeeb9246bdfae2,
         type: 3}

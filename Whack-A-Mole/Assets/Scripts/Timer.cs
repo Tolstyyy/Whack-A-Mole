@@ -6,6 +6,11 @@ public class Timer : MonoBehaviour
 {
     public float timer = 30f;              // Time left in the game
     public GameObject failMenuUI;       // Reference to the fail menu ui
+    public GameObject gameUI;
+    public GameObject spawner;
+
+    public GameObject[] hands;
+    public GameObject hammer;
 
     
     void Update() // Updates the body every frame
@@ -15,20 +20,22 @@ public class Timer : MonoBehaviour
         if (timer <= 0) // If the timer has reached 0 or is below it stop the time
         {
             Debug.Log("Out of time");
-            Time.timeScale = 0f;           
-        }
-        else // If not set the time speed back to normal
-        {
-            Time.timeScale = 1f;
+
+            Destroy(spawner);
+
+            hammer.SetActive(false);
+
+            foreach(var hand in hands)
+            {
+                hand.SetActive(true);
+            }
+
+            gameUI.SetActive(false);
         }
 
-        if (Time.timeScale == 0) // If time has stopped
+        if (timer <= 0) // If timer has reached 0
         {
             failMenuUI.SetActive(true); // Show the failmenu
-        }
-        else
-        {
-            failMenuUI.SetActive(false); // Otherwise hide it
-        }
+        }      
     }
 }

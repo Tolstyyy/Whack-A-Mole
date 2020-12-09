@@ -33,7 +33,8 @@ public class HitMole : MonoBehaviour
             // Add damage to the mole that was hit
             damagable.TakeDamage(1.0f);          
         }
-        else if (speedPerSec > speedWhenRegistered && damagable == null)
+        
+        if (speedPerSec > speedWhenRegistered && damagable == null)
         {
             // Remove time from timer on miss
             //timerScript.timer -= removeTimeOnMiss;
